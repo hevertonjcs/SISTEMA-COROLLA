@@ -9,11 +9,11 @@ export const generatePDF = async (formData, logoConfig = null) => {
   const margin = 30; 
   let yPosition = margin;
   const contentWidth = pageWidth - 2 * margin;
-  const primaryColor = [4, 120, 87]; 
+  const primaryColor = [192, 192, 192]; 
   const secondaryColor = [75, 85, 99]; 
   const blackColor = [31, 41, 55]; 
 
-  const multinegociacoesLogoUrl = 'https://bfxamibaxsyxltqkiftd.supabase.co/storage/v1/object/public/logocentral//logo.png';
+  const multinegociacoesLogoUrl = 'https://i.ibb.co/4RWGPRv8/Chat-GPT-Image-16-de-out-de-2025-18-57-31.png';
 
   const addSectionTitle = (title) => {
     yPosition += 6; 
@@ -110,7 +110,7 @@ export const generatePDF = async (formData, logoConfig = null) => {
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(8); 
     doc.setTextColor(secondaryColor[0], secondaryColor[1], secondaryColor[2]);
-    doc.text(formData.empresa_nome || 'Multinegociações LTDA', margin, initialYForText);
+    doc.text(formData.empresa_nome || 'JBENS SOLUÇÕES FINANCEIRAS LTDA LTDA', margin, initialYForText);
     initialYForText += 12; 
     doc.text(`Código: ${formData.codigo_cadastro || 'N/A'} | Data: ${formatData(formData.data_cadastro, 'DD/MM/YYYY HH:mm') || 'N/A'}`, margin, initialYForText);
     
