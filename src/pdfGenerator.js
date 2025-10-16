@@ -110,7 +110,7 @@ export const generatePDF = async (formData, logoConfig = null) => {
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(8); 
     doc.setTextColor(secondaryColor[0], secondaryColor[1], secondaryColor[2]);
-    doc.text(formData.empresa_nome || 'JBENS SOLUÇÕES FINANCEIRAS LTDA LTDA', margin, initialYForText);
+    doc.text(formData.empresa_nome || 'JBENS SOLUÇÕES FINANCEIRAS LTDA', margin, initialYForText);
     initialYForText += 12; 
     doc.text(`Código: ${formData.codigo_cadastro || 'N/A'} | Data: ${formatData(formData.data_cadastro, 'DD/MM/YYYY HH:mm') || 'N/A'}`, margin, initialYForText);
     
