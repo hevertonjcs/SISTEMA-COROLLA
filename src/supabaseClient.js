@@ -5,8 +5,8 @@ const supabaseUrlFromEnv = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKeyFromEnv = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 // Use as credenciais fornecidas pelo sistema (via <supabase_credentials>)
-const systemSupabaseUrl = 'https://bfxamibaxsyxltqkiftd.supabase.co';
-const systemSupabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmeGFtaWJheHN5eGx0cWtpZnRkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDkzODQ4MTMsImV4cCI6MjA2NDk2MDgxM30.Yr3tTDElbMAewKq-MqBFeh6PG11N48ruy-xbUOa1EUQ';
+const systemSupabaseUrl = 'https://owubytzfrsajjjhiduaz.supabase.co';
+const systemSupabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im93dWJ5dHpmcnNhampqaGlkdWF6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA2NDM0OTcsImV4cCI6MjA3NjIxOTQ5N30.sMSkQpiva_bVqQcLmjwh4BYXoWji_9XBfTJ7uW-XfGk';
 
 // Prefer values provided via environment variables (Vercel/Vite) if set.
 // Fallback to the hard‑coded credentials as a last resort.  This allows
