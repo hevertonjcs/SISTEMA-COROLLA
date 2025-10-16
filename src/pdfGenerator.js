@@ -13,7 +13,7 @@ export const generatePDF = async (formData, logoConfig = null) => {
   const secondaryColor = [75, 85, 99]; 
   const blackColor = [31, 41, 55]; 
 
-  const multinegociacoesLogoUrl = 'https://i.ibb.co/4RWGPRv8/Chat-GPT-Image-16-de-out-de-2025-18-57-31.png';
+  const multinegociacoesLogoUrl = 'https://i.ibb.co/mCh621DP/logo-pdf-sem-fundo.png';
 
   const addSectionTitle = (title) => {
     yPosition += 6; 
