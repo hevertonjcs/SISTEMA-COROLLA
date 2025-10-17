@@ -1,0 +1,33 @@
+-- 🧹 Remove a versão antiga da função
+DROP FUNCTION IF EXISTS public.login_case_insensitive(text, text);
+
+-- ✅ Recria a função com o tipo certo (permissoes como JSONB)
+CREATE OR REPLACE FUNCTION public.login_case_insensitive(
+  p_nome_usuario text,
+  p_senha text
+)
+RETURNS TABLE (
+  id uuid,
+  nome_usuario text,
+  senha text,
+  tipo_acesso text,
+  equipe text,
+  permissoes jsonb
+)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+  RETURN QUERY
+  SELECT
+    u.id,
+    u.nome_usuario,
+    u.senha,
+    u.tipo_acesso,
+    u.equipe,
+    COALESCE(u.permissoes::jsonb, '{}'::jsonb) AS permissoes
+  FROM usuarios u
+  WHERE LOWER(u.nome_usuario) = LOWER(p_nome_usuario)
+    AND u.senha = p_senha
+  LIMIT 1;
+END;
+$$;
