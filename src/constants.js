@@ -120,9 +120,9 @@ export const SEGMENTO_OPCOES = [
   'Imóveis Residenciais',
   'Imóveis Comerciais',
   'Serviços Diversos',
-  'Parcelamento Bancario'
-  'Crédito Rural'
-  'Autofinanciamento'
+  'Parcelamento Bancario',
+  'Crédito Rural',
+  'Autofinanciamento',
   'Outros'
 ];
 
